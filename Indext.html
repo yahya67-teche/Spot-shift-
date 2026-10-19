@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot Shift</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #101820;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #55e6a5;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 14px;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            border: none;
+            margin: 15px 0;
+        }
+
+        button {
+            background: #55e6a5;
+            color: #101820;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #result {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Spot Shift</h1>
+
+    <p>Find your next favourite song.</p>
+
+    <input
+        type="text"
+        id="song"
+        placeholder="Enter a song or artist"
+    >
+
+    <br>
+
+    <button onclick="searchSong()">Search Song</button>
+
+    <div id="result"></div>
+
+    <script>
+        function searchSong() {
+            const song = document.getElementById("song").value;
+            const result = document.getElementById("result");
+
+            if (song.trim() === "") {
+                result.textContent = "Please enter a song or artist!";
+            } else {
+                result.textContent =
+                    "Your search for '" + song +
+                    "' is ready! Music discovery is coming soon.";
+            }
+        }
+    </script>
+
+</body>
+</html>
